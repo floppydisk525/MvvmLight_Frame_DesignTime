@@ -9,7 +9,7 @@ namespace MvvmLight_Frame_DesignTime.Design
         {
             // Use this to create design time data
 
-            var item = new DataItem("Welcome to MVVM Light [design]", "Screen1 Design", "Screen2 Design", "Screen3 Design");
+            var item = new DataItem("Welcome to MVVM Light [Design]", "Screen1 Design", "Screen2 Design", "Screen3 Design");
             callback(item, null);
         }
     }
