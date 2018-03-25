@@ -47,3 +47,4 @@ Temporary Items
 .apdisk
 *.suo
 .vs/MvvmLight_Frame_DesignTime/v15/Server/sqlite3/storage.ide-wal
+.vs/MvvmLight_Frame_DesignTime/v15/Server/sqlite3/storage.ide
