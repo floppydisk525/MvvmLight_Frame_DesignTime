@@ -7,7 +7,7 @@
         mc:Ignorable="d ignore"
         Height="500"
         Width="300"
-        Title="MVVM Light Application"
+        Title="MVVM Light Application" Icon="BugLady.ico"
         DataContext="{Binding Main, Source={StaticResource Locator}}"
         
         xmlns:vm="clr-namespace:MvvmLight_Frame_DesignTime.ViewModel"
@@ -30,8 +30,8 @@
                    Text="{Binding WelcomeTitle}"
                    TextWrapping="Wrap" Margin="18,21,10,185" Width="264" />
         
-        <Frame Source="{Binding FrameUri}" HorizontalAlignment="Left" Height="237" Margin="25,120,0,0" VerticalAlignment="Top" Width="243"
-               />
+        <Frame HorizontalAlignment="Left" Height="237" Margin="25,120,0,0" VerticalAlignment="Top" Width="243"
+               Source="{Binding FrameUri}" />
 
     </Grid>
 </Window>
