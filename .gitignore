@@ -8,6 +8,11 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+# from Stackoverflow and github, files to ignore
+# https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+# https://stackoverflow.com/questions/1677113/files-to-ignore-when-using-visual-studio-with-git
+# Note, if you use unit testing, those need to ignored as well, add as needed.
+
 # Windows Installer files
 *.cab
 *.msi
@@ -20,8 +25,26 @@ $RECYCLE.BIN/
 # Visual Studio 2015/2017 cache/options directory
 .vs/
 
-# Packages 
-packages/
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Packages   (do we want to ignore this one or not? Let's not for now...)
+# packages/
 
 
 # =========================
@@ -52,6 +75,6 @@ packages/
 Network Trash Folder
 Temporary Items
 .apdisk
-*.suo
-.vs/MvvmLight_Frame_DesignTime/v15/Server/sqlite3/storage.ide-wal
-.vs/MvvmLight_Frame_DesignTime/v15/Server/sqlite3/storage.ide
+# The following are ignored with .vs above
+# .vs/MvvmLight_Frame_DesignTime/v15/Server/sqlite3/storage.ide-wal
+# .vs/MvvmLight_Frame_DesignTime/v15/Server/sqlite3/storage.ide
