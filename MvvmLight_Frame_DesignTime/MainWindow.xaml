@@ -22,7 +22,7 @@
         </ResourceDictionary>
     </Window.Resources>
 
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot" RenderTransformOrigin="0.49,0.503">
 
         <TextBlock FontSize="24"
                    FontWeight="Bold"
@@ -30,8 +30,12 @@
                    Text="{Binding WelcomeTitle}"
                    TextWrapping="Wrap" Margin="18,21,10,185" Width="264" />
         
+        <!--Using BOTH the Content and Source Properties
+        The Content Property is used for Design Time data
+        The Source Property -->
         <Frame HorizontalAlignment="Left" Height="237" Margin="25,120,0,0" VerticalAlignment="Top" Width="243"
-               Source="{Binding FrameUri}" />
-
+               d:DataContext="{d:DesignInstance Type=v:IntroPage, IsDesignTimeCreatable=True}" 
+               Content ="{Binding}"                 
+               Source="{Binding FrameUri}"/>
     </Grid>
 </Window>

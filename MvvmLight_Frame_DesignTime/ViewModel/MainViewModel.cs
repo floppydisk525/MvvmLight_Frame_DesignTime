@@ -83,16 +83,16 @@ namespace MvvmLight_Frame_DesignTime.ViewModel
             FrameUri = ViewModelLocator.IntroPageUri;
 
 #if DEBUG
-            if (IsInDesignMode)
+            if (IsInDesignModeStatic)
             {
                 //var page = ServiceLocator.Current.GetInstance<IntroViewModel>();
-                IntroPage introPage = new IntroPage();
-                Frame frame = new Frame();
-                Page page = new Page();
+                //IntroPage introPage = new IntroPage();
+                //Frame frame = new Frame();
+                //Page page = new Page();
                 
                 
 
-                FrameUri = new Uri(ViewModelLocator.IntroPageUri.ToString(), UriKind.Relative);
+                //FrameUri = new Uri(ViewModelLocator.IntroPageUri.ToString(), UriKind.Relative);
             }
 #endif
         }
