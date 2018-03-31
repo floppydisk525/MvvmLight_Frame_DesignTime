@@ -14,18 +14,17 @@ This example code will be used in larger MvvmLight template that I've created an
 3. Enjoy the design time experience WPF & blend provide by having a FRAME populate a page during DESIGN TIME
 4. Use SimpleIOC
 
-##Releases
+## Releases
 0.1.0. A small applicaiton built that DOES NOTE show a PAGE in the FRAME at design time.  It does show the frame correctly at run time. 
 0.1.1  This release shows a possible solution by using designtime ignore d: in the MainWindow.xaml along with using BOTH the Source and Content properties.  This solution leads to a Question - see issues below...
 
 ## Issues
 Issue #1:  Is it ok to use the Source & Content property for the Frame?  Could this be done differently.
 
-<Frame HorizontalAlignment="Left" Height="237" Margin="25,120,0,0" VerticalAlignment="Top" Width="243"
+'<Frame HorizontalAlignment="Left" Height="237" Margin="25,120,0,0" VerticalAlignment="Top" Width="243"
                d:DataContext="{d:DesignInstance Type=v:IntroPage, IsDesignTimeCreatable=True}" 
                Content ="{Binding}"                 
-               Source="{Binding FrameUri}"/>
-			   
+               Source="{Binding FrameUri}"/>'
 Issue #2:  Post the MvvmLight toolkit version, etc.  
 Issue #3:  Understanding of WPF/xaml.  Areas that could use better understanding include WPF/Xaml instantiation of objects & controls and diagnosing Xaml issues.  
 
