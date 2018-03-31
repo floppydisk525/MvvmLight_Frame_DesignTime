@@ -15,7 +15,7 @@ This example code will be used in larger MvvmLight template that I've created a 
 4. Use SimpleIOC
 
 ## Releases
-0.1.0. A small applicaiton built that DOES NOTE show a PAGE in the FRAME at design time.  It does show the frame correctly at run time. Left image is DESIGN TIME and Right image is RUN TIME.
+0.1.0. The 'Starter' applicaiton that DOES NOT work.  This version does NOT show a PAGE in the FRAME at design time.  It does show the frame correctly at run time. Left image is DESIGN TIME and Right image is RUN TIME.
 
 ![alt text][DesignTimeNoPageImage]![alt text][RunTimeWork]
 
@@ -33,7 +33,7 @@ Issue #2:  Post the MvvmLight toolkit version, etc.
 Issue #3:  Understanding of WPF/xaml.  Areas that could use better understanding include WPF/Xaml instantiation of objects & controls and diagnosing Xaml issues.  
 
 ## Comment
-I wish you could set the Content property w/ a d:Content to tell the xaml parser/blend to only use Content at design time.  
+I wish you could set the Content property w/ a d:Content to tell the xaml parser/blend to only use Content at design time.  That would aleviate the program from looking at the Content and Source property at run time - however that works.  
 
 [DesignTimeNoPageImage]: https://github.com/floppydisk525/MvvmLight_Frame_DesignTime/blob/github-Images/MvvmLight_Frame_DesignTime/github_Images/DesignTimeNoPageImage.PNG
 [RunTimeWork]: https://github.com/floppydisk525/MvvmLight_Frame_DesignTime/blob/github-Images/MvvmLight_Frame_DesignTime/github_Images/RunTimeWork.PNG
