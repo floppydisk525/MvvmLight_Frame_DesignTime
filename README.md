@@ -6,7 +6,7 @@ The program starts with a MVVMLight WPF template generated with VS2017 and adds 
 
 A stackoverflow question was asked about it here [StackOverflow 49247892](https://stackoverflow.com/questions/49247892/mvvmlight-display-page-in-frame-during-design-time)
 
-This example code will be used in larger MvvmLight template that I've created and backed up to [github here called MvvmLight_WPF_Frame_Nav](https://github.com/floppydisk525/MvvmLight_WPF_Frame_Nav).  The MvvmLight_WPF_Frame_Nav example program includes a navigation service and means to pass objects between viewmodels.  As of April 2018 that program is still a work in progress.  
+This example code will be used in larger MvvmLight template that I've created a github repository [here called MvvmLight_WPF_Frame_Nav](https://github.com/floppydisk525/MvvmLight_WPF_Frame_Nav).  The MvvmLight_WPF_Frame_Nav example program includes a navigation service and means to pass objects between viewmodels.  As of April 2018 that program is still a work in progress.  
 
 ## Goals
 1. Use MVVMLight
@@ -22,11 +22,11 @@ This example code will be used in larger MvvmLight template that I've created an
 ## Issues
 Issue #1:  Is it ok to use the Source & Content property for the Frame?  Could this be done differently.
 
-'''
+'''xml
 <Frame HorizontalAlignment="Left" Height="237" Margin="25,120,0,0" VerticalAlignment="Top" Width="243"
                d:DataContext="{d:DesignInstance Type=v:IntroPage, IsDesignTimeCreatable=True}" 
                Content ="{Binding}"                 
-               Source="{Binding FrameUri}"/>
+               Source="{Binding FrameUri}"/> 
 '''
 Issue #2:  Post the MvvmLight toolkit version, etc.  
 Issue #3:  Understanding of WPF/xaml.  Areas that could use better understanding include WPF/Xaml instantiation of objects & controls and diagnosing Xaml issues.  
