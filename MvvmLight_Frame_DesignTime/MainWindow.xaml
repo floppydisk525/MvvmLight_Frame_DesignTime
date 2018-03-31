@@ -8,11 +8,7 @@
         Height="500"
         Width="300"
         Title="MVVM Light Application" Icon="BugLady.ico"
-        DataContext="{Binding Main, Source={StaticResource Locator}}"
-        
-        xmlns:vm="clr-namespace:MvvmLight_Frame_DesignTime.ViewModel"
-        xmlns:v="clr-namespace:MvvmLight_Frame_DesignTime"
-        >
+        DataContext="{Binding Main, Source={StaticResource Locator}}">
     
     <Window.Resources>
         <ResourceDictionary>
