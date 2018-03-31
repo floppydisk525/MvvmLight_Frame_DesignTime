@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ignore="http://www.galasoft.ch/ignore"
+        xmlns:v="clr-namespace:MvvmLight_Frame_DesignTime"
         mc:Ignorable="d ignore"
         Height="500"
         Width="300"
@@ -24,8 +25,13 @@
                    FontWeight="Bold"
                    Foreground="Purple"
                    Text="{Binding WelcomeTitle}"
-                   TextWrapping="Wrap" Margin="18,21,10,185" Width="264" />     
-        <Frame HorizontalAlignment="Left" Height="237" Margin="25,120,0,0" VerticalAlignment="Top" Width="243"               
+                   TextWrapping="Wrap" Margin="18,21,10,185" Width="264" />
+        <!--Using BOTH the Content and Source Properties
+        The Content Property is used for Design Time data
+        The Source Property -->
+        <Frame HorizontalAlignment="Left" Height="237" Margin="25,120,0,0" VerticalAlignment="Top" Width="243"
+               d:DataContext="{d:DesignInstance Type=v:IntroPage, IsDesignTimeCreatable=True}" 
+               Content ="{Binding}"
                Source="{Binding FrameUri}"/>
     </Grid>
 </Window>
