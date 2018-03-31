@@ -21,7 +21,6 @@ This example code will be used in larger MvvmLight template that I've created a 
 
 0.1.1  This release shows a possible solution by using designtime ignore d: in the MainWindow.xaml along with using BOTH the Source and Content properties.  This solution leads to a Question - see issues below...  One thing to point out about this solution is that no datatemplates were added to App.xaml or the MainView.xaml files.  Also, no other objects (frame, page or other) are instantiated in the viewmodel or code behind.  
 
-Design time Image                          Run Time Image
 ![alt text][DesignTimePageImageWorksNAVButtons]![alt text][RunTimeWork]
 
 ## Issues
@@ -46,7 +45,7 @@ The line Source = "{Binding FrameUri}" was removed.  The end result was DesignTi
 
 ![alt text][DesignTimePageImageWORKS]![alt text][RunTimeDoesNOTWorkTRIAL]
 
-Therefore, to achieve a workable solution, the Source="{Binding FrameUri}" was added and the solution works.  But is there a better way?  Note - when the Source="{Binding FrameUri}" was added, the navigation bar showed up - strange - something going here...
+To achieve a workable solution, the Source="{Binding FrameUri}" was added and the solution works.  But is there a better way?  When the Source="{Binding FrameUri}" was added, the navigation bar showed up - strange - something going here...
 
 ![alt text][DesignTimePageImageWorksNAVButtons]
 
