@@ -4,13 +4,13 @@ The purpose is to create an example program that shows how to populate a Frame w
 
 The program starts with a MVVMLight WPF template generated with VS2017 and adds a frame, page + viewmodel, uri property, page design time data, and appropriate properties for binding. 
 
-A stackoverflow question was asked about it here [StackOverflow 49247892](https://stackoverflow.com/questions/49247892/mvvmlight-display-page-in-frame-during-design-time)
+A stackoverflow question was asked about it here [StackOverflow 49247892](https://stackoverflow.com/questions/49247892/mvvmlight-display-page-in-frame-during-design-time) and this readme and stackoverflow contain the same information.  
 
-This example code will be used in larger MvvmLight template that I've created a github repository [here called MvvmLight_WPF_Frame_Nav](https://github.com/floppydisk525/MvvmLight_WPF_Frame_Nav).  The MvvmLight_WPF_Frame_Nav example program includes a navigation service and means to pass objects between viewmodels.  As of April 2018 that program is still a work in progress.  
+This example code will be used in larger MvvmLight template that has been created [here called MvvmLight_WPF_Frame_Nav](https://github.com/floppydisk525/MvvmLight_WPF_Frame_Nav).  The MvvmLight_WPF_Frame_Nav example program includes a navigation service and means to pass objects between viewmodels.  As of April 2018 that program is still a work in progress.  
 
 ## Goals
 1. Use MVVMLight
-2. Use a Frame Control, Source property, URI Property
+2. Use a Frame Control, Frame.Source property, URI Property for the source
 3. Enjoy the design time experience WPF & blend provide by having a FRAME populate a page during DESIGN TIME
 4. Use SimpleIOC
 
@@ -24,14 +24,14 @@ This example code will be used in larger MvvmLight template that I've created a 
 ![alt text][DesignTimePageImageWorksNAVButtons]![alt text][RunTimeWork]
 
 ## Issues
-Issue #1:  Is it ok to use the Source & Content property for the Frame?  Could this be done differently.
+Issue #1:  Is it ok to use the Source & Content property for the Frame?  Could this be done differently.  This is the key code added to make the solution work:
 ```xml
 <Frame HorizontalAlignment="Left" Height="237" Margin="25,120,0,0" VerticalAlignment="Top" Width="243"
                d:DataContext="{d:DesignInstance Type=v:IntroPage, IsDesignTimeCreatable=True}" 
                Content ="{Binding}"                 
                Source="{Binding FrameUri}"/>
 ```
-To get to the above code, the following lines were first tried.
+To get to the above code, the following lines were first added.
 ```xml
 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 xmlns:ignore="http://www.galasoft.ch/ignore"
@@ -41,11 +41,11 @@ xmlns:v="clr-namespace:MvvmLight_Frame_DesignTime"
 d:DataContext="{d:DesignInstance Type=v:IntroPage, IsDesignTimeCreatable=True}" 
 Content ="{Binding}"
 ```
-The line Source = "{Binding FrameUri}" was removed.  The end result was DesignTime WORKED (Yay - Left Image).  However, RUN TIME did NOT work (Right Image).
+The line Source = "{Binding FrameUri}" was removed.  The end result was DesignTime WORKED (Yay - Left Image).  However, RUN TIME did NOT work (Booo - Right Image).
 
 ![alt text][DesignTimePageImageWORKS]![alt text][RunTimeDoesNOTWorkTRIAL]
 
-To achieve a workable solution, the Source="{Binding FrameUri}" was added and the solution works.  But is there a better way?  When the Source="{Binding FrameUri}" was added, the navigation bar showed up - strange - something going here...
+To achieve a workable solution, the Source="{Binding FrameUri}" was added.  When the Source="{Binding FrameUri}" was added, the navigation bar showed up - strange.  But is there a better way to do this?
 
 ![alt text][DesignTimePageImageWorksNAVButtons]
 
