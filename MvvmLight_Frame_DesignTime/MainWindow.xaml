@@ -28,14 +28,8 @@
                    FontWeight="Bold"
                    Foreground="Purple"
                    Text="{Binding WelcomeTitle}"
-                   TextWrapping="Wrap" Margin="18,21,10,185" Width="264" />
-        
-        <!--Using BOTH the Content and Source Properties
-        The Content Property is used for Design Time data
-        The Source Property -->
-        <Frame HorizontalAlignment="Left" Height="237" Margin="25,120,0,0" VerticalAlignment="Top" Width="243"
-               d:DataContext="{d:DesignInstance Type=v:IntroPage, IsDesignTimeCreatable=True}" 
-               Content ="{Binding}"                 
+                   TextWrapping="Wrap" Margin="18,21,10,185" Width="264" />     
+        <Frame HorizontalAlignment="Left" Height="237" Margin="25,120,0,0" VerticalAlignment="Top" Width="243"               
                Source="{Binding FrameUri}"/>
     </Grid>
 </Window>
