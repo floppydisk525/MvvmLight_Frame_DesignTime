@@ -79,3 +79,7 @@ Temporary Items
 # .vs/MvvmLight_Frame_DesignTime/v15/Server/sqlite3/storage.ide-wal
 # .vs/MvvmLight_Frame_DesignTime/v15/Server/sqlite3/storage.ide
 *.ide-wal
+.vs/MvvmLight_Frame_DesignTime/v15/.suo
+*.suo
+MvvmLight_Frame_DesignTime/bin/Debug/MvvmLight_Frame_DesignTime.exe
+MvvmLight_Frame_DesignTime/obj/Debug/MainWindow.g.i.cs
