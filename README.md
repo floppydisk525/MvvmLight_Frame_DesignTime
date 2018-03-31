@@ -35,5 +35,6 @@ Issue #3:  Understanding of WPF/xaml.  Areas that could use better understanding
 ## Comment
 I wish you could set the Content property w/ a d:Content to tell the xaml parser/blend to only use Content at design time.  That would aleviate the program from looking at the Content and Source property at run time - however that works.  
 
-[DesignTimeNoPageImage]: https://github.com/floppydisk525/MvvmLight_Frame_DesignTime/blob/github-Images/MvvmLight_Frame_DesignTime/github_Images/DesignTimeNoPageImage.PNG
-[RunTimeWork]: https://github.com/floppydisk525/MvvmLight_Frame_DesignTime/blob/github-Images/MvvmLight_Frame_DesignTime/github_Images/RunTimeWork.PNG
+[DesignTimeNoPageImage]: MvvmLight_Frame_DesignTime/github_Images/DesignTimeNoPageImage.PNG
+
+[RunTimeWork]: MvvmLight_Frame_DesignTime/github_Images/RunTimeWork.PNG
