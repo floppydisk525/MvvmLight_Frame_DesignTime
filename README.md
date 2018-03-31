@@ -19,7 +19,10 @@ This example code will be used in larger MvvmLight template that I've created a 
 
 ![alt text][DesignTimeNoPageImage]![alt text][RunTimeWork]
 
-0.1.1  This release shows a possible solution by using designtime ignore d: in the MainWindow.xaml along with using BOTH the Source and Content properties.  This solution leads to a Question - see issues below...
+0.1.1  This release shows a possible solution by using designtime ignore d: in the MainWindow.xaml along with using BOTH the Source and Content properties.  This solution leads to a Question - see issues below...  One thing to point out about this solution is that no datatemplates were added to App.xaml or the MainView.xaml files.  Also, no other objects (frame, page or other) are instantiated in the viewmodel or code behind.  
+
+Design time Image                          Run Time Image
+![alt text][DesignTimePageImageWorksNAVButtons]![alt text][RunTimeWork]
 
 ## Issues
 Issue #1:  Is it ok to use the Source & Content property for the Frame?  Could this be done differently.
@@ -43,7 +46,9 @@ The line Source = "{Binding FrameUri}" was removed.  The end result was DesignTi
 
 ![alt text][DesignTimePageImageWORKS]![alt text][RunTimeDoesNOTWorkTRIAL]
 
-Therefore, to achieve a workable solution, the Source="{Binding FrameUri}" was added and now the solution works.  But is there a better way?
+Therefore, to achieve a workable solution, the Source="{Binding FrameUri}" was added and the solution works.  But is there a better way?  Note - when the Source="{Binding FrameUri}" was added, the navigation bar showed up - strange - something going here...
+
+![alt text][DesignTimePageImageWorksNAVButtons]
 
 Issue #2:  Post the MvvmLight toolkit version, etc.  
 Issue #3:  Understanding of WPF/xaml.  Areas that could use better understanding include WPF/Xaml instantiation of objects & controls and diagnosing Xaml issues.  
@@ -55,3 +60,4 @@ I wish you could set the Content property w/ a d:Content to tell the xaml parser
 [RunTimeWork]: MvvmLight_Frame_DesignTime/github_Images/RunTimeWork.PNG
 [DesignTimePageImageWORKS]: MvvmLight_Frame_DesignTime/github_Images/DesignTimePageImageWORKS.PNG
 [RunTimeDoesNOTWorkTRIAL]: MvvmLight_Frame_DesignTime/github_Images/RunTimeDoesNOTWorkTRIAL.PNG
+[DesignTimePageImageWorksNAVButtons]: MvvmLight_Frame_DesignTime/github_Images/DesignTimePageImageWorksNAVButtons.PNG
