@@ -15,7 +15,8 @@ This example code will be used in larger MvvmLight template that I've created a 
 4. Use SimpleIOC
 
 ## Releases
-0.1.0. A small applicaiton built that DOES NOTE show a PAGE in the FRAME at design time.  It does show the frame correctly at run time. 
+0.1.0. A small applicaiton built that DOES NOTE show a PAGE in the FRAME at design time.  It does show the frame correctly at run time. Left image is DESIGN TIME and Right image is RUN TIME.
+
 ![alt text][DesignTimeNoPageImage]![alt text][RunTimeWork]
 
 0.1.1  This release shows a possible solution by using designtime ignore d: in the MainWindow.xaml along with using BOTH the Source and Content properties.  This solution leads to a Question - see issues below...
