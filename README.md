@@ -29,6 +29,22 @@ Issue #1:  Is it ok to use the Source & Content property for the Frame?  Could t
                Content ="{Binding}"                 
                Source="{Binding FrameUri}"/>
 ```
+To get to the above code, the following lines were first tried.
+```xml
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+xmlns:ignore="http://www.galasoft.ch/ignore"
+xmlns:v="clr-namespace:MvvmLight_Frame_DesignTime"
+```
+```xml
+d:DataContext="{d:DesignInstance Type=v:IntroPage, IsDesignTimeCreatable=True}" 
+Content ="{Binding}"
+```
+The line Source = "{Binding FrameUri}" was removed.  The end result was DesignTime WORKED (Yay - Left Image).  However, RUN TIME did NOT work (Right Image).
+
+![alt text][DesignTimePageImageWORKS]![alt text][RunTimeDoesNOTWorkTRIAL]
+
+Therefore, to achieve a workable solution, the Source="{Binding FrameUri}" was added and now the solution works.  But is there a better way?
+
 Issue #2:  Post the MvvmLight toolkit version, etc.  
 Issue #3:  Understanding of WPF/xaml.  Areas that could use better understanding include WPF/Xaml instantiation of objects & controls and diagnosing Xaml issues.  
 
@@ -36,5 +52,6 @@ Issue #3:  Understanding of WPF/xaml.  Areas that could use better understanding
 I wish you could set the Content property w/ a d:Content to tell the xaml parser/blend to only use Content at design time.  That would aleviate the program from looking at the Content and Source property at run time - however that works.  
 
 [DesignTimeNoPageImage]: MvvmLight_Frame_DesignTime/github_Images/DesignTimeNoPageImage.PNG
-
 [RunTimeWork]: MvvmLight_Frame_DesignTime/github_Images/RunTimeWork.PNG
+[DesignTimePageImageWORKS]: MvvmLight_Frame_DesignTime/github_Images/DesignTimePageImageWORKS.PNG
+[RunTimeDoesNOTWorkTRIAL]: MvvmLight_Frame_DesignTime/github_Images/RunTimeDoesNOTWorkTRIAL.PNG
