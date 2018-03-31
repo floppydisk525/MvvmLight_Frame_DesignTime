@@ -29,12 +29,12 @@ Issue #1:  Is it ok to use the Source & Content property for the Frame?  Could t
         />
 ```
 
-'''xml
+```xml
 <Frame HorizontalAlignment="Left" Height="237" Margin="25,120,0,0" VerticalAlignment="Top" Width="243"
                d:DataContext="{d:DesignInstance Type=v:IntroPage, IsDesignTimeCreatable=True}" 
                Content ="{Binding}"                 
                Source="{Binding FrameUri}"/>
-'''
+```
 
 Issue #2:  Post the MvvmLight toolkit version, etc.  
 Issue #3:  Understanding of WPF/xaml.  Areas that could use better understanding include WPF/Xaml instantiation of objects & controls and diagnosing Xaml issues.  
