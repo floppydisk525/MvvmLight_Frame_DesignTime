@@ -1,6 +1,6 @@
 # MvvmLight_Frame_DesignTime
 ## Purpose
-The purpose is to create an example program that shows how to populate a Frame with a Page during DESIGN TIME and uses the Frame Source property with a URI property during RUN TIME.  
+The purpose is to create an example program that shows how to populate a Frame with a Page during DESIGN TIME and uses the Frame Source property with a URI property during RUN TIME.
 
 The program starts with a MVVMLight WPF template generated with VS2017 and adds a frame, page + viewmodel, uri property, page design time data, and appropriate properties for binding. 
 
@@ -19,7 +19,7 @@ This example code will be used in a larger MvvmLight template that has been crea
 
 ![alt text][DesignTimeNoPageImage]![alt text][RunTimeWork]
 
-0.1.1  This release shows a possible solution by using designtime ignore d: in the MainWindow.xaml along with using BOTH the Source and Content properties.  This solution leads to a Question - see issues below...  One thing to point out about this solution is that no datatemplates were added to App.xaml or the MainView.xaml files.  Also, no other objects (frame, page or other) are instantiated in the viewmodel or code behind.  
+0.1.1  This release shows a possible solution by using designtime ignore d: in the MainWindow.xaml along with using BOTH the Source and Content properties.  Inspired by this [stackoverflow question](https://stackoverflow.com/questions/43294210/wpf-show-frames-contentwpf-page-at-design-time-in-idevisual-studio-2017).  This solution leads to a Question - see issues below...  One thing to point out about this solution is that no datatemplates were added to App.xaml or the MainView.xaml files.  Also, no other objects (frame, page or other) are instantiated in the viewmodel or code behind.  
 
 ![alt text][DesignTimePageImageWorksNAVButtons]![alt text][RunTimeWork]
 
