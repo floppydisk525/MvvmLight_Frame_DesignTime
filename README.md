@@ -16,6 +16,7 @@ This example code will be used in larger MvvmLight template that I've created a 
 
 ## Releases
 0.1.0. A small applicaiton built that DOES NOTE show a PAGE in the FRAME at design time.  It does show the frame correctly at run time. 
+![alt text][DesignTimeNoPageImage]![alt text][RunTimeWork]
 
 0.1.1  This release shows a possible solution by using designtime ignore d: in the MainWindow.xaml along with using BOTH the Source and Content properties.  This solution leads to a Question - see issues below...
 
@@ -32,3 +33,6 @@ Issue #3:  Understanding of WPF/xaml.  Areas that could use better understanding
 
 ## Comment
 I wish you could set the Content property w/ a d:Content to tell the xaml parser/blend to only use Content at design time.  
+
+[DesignTimeNoPageImage]: https://github.com/floppydisk525/MvvmLight_Frame_DesignTime/blob/github-Images/MvvmLight_Frame_DesignTime/github_Images/DesignTimeNoPageImage.PNG
+[RunTimeWork]: https://github.com/floppydisk525/MvvmLight_Frame_DesignTime/blob/github-Images/MvvmLight_Frame_DesignTime/github_Images/RunTimeWork.PNG
