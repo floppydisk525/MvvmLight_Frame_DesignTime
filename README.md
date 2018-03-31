@@ -49,6 +49,8 @@ To achieve a workable solution, the Source="{Binding FrameUri}" was added back t
 
 ![alt text][DesignTimePageImageWorksNAVButtons]
 
+NOTE:  After compiling and running the solution, the navigation buttons in the above image disappeared in design time.  Clearly, don't understand the internals.  The property to show the nav buttons could be set to true if we want them.  
+
 Issue #2:  Post the MvvmLight toolkit version, etc.  
 Issue #3:  Understanding of WPF/xaml.  Areas that could use better understanding include WPF/Xaml instantiation of objects & controls and diagnosing Xaml issues.  
 
